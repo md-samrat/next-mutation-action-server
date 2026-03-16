@@ -4,7 +4,12 @@ import React from "react";
 
 function CreateUser() {
     const handleSubmit = async(formData:FormData) =>{
-        await createUser(formData)
+        const result = await createUser(formData)
+        if(result.success){
+          alert(result.message)
+        }else{
+          alert(result.message)
+        }
     }
  
 

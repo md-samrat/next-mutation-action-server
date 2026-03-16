@@ -10,6 +10,7 @@ export const createUser = async (formData: FormData) => {
   try {
     const newUser = new UserModel({ name, email });
     await newUser.save();
+    
     return {
       success: true,
       message: "user create successfull",
